@@ -26,11 +26,30 @@ these features:
 
 ## Default settings variables
 
+// TODO
+
 ## Custom settings
 
 - Organize custom settings by module name. I. e. your module should expect
   settings at `settings.mymodule`.
 
 ## Usage
+
+    // settings.js - configure express server.
+    module.exports = {
+        modules: [
+            'bikelane'
+        ],
+        port: 8080,
+        siteTitle: 'Transport'
+    };
+
+    // app.js - start express server.
+    require('expresslane').start(__dirname);
+
+    // Start application.
+    node app.js
+
+## Directory structure
 
 // TODO
