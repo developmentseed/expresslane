@@ -67,4 +67,4 @@ Express lane builds around a couple of assumptions:
 
 ## Directory structure
 
-// TODO
+- `/public` - static files
