@@ -21,7 +21,7 @@ these features:
 - A settings module that exports settings as an anonymous object:
 
     module.exports = {
-      port: 8888
+        // My settings
     };
 
 ## Default settings variables
