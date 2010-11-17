@@ -31,12 +31,6 @@ these features:
 - Organize custom settings by module name. I. e. your module should expect
   settings at `settings.mymodule`.
 
-## API
+## Usage
 
-    // Create an express lane server
-    var app = require('expresslane');
-
-    // Get settings for a module.
-    var mysettings = app.set('settings')('mymodule');
-
-    // TODO
+// TODO
