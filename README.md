@@ -1,12 +1,12 @@
 
 # Express Lane
 
-Express based framework for building web applications. Adds a couple of
-assumptions on top of [Express](http://expressjs.com/) that make building
-websites faster.
+Get started building with [Express](http://expressjs.com/) fast.
+
+Express lane builds around a couple of assumptions:
 
 - View engine is handlebars.
-- Database backend is CouchDB interfaced by cradle.
+- Database backend is CouchDB interfaced by [Cradle](https://github.com/cloudhead/cradle).
 - Settings are managed centrally and loaded on server object.
 - Session handling is used.
 
@@ -17,7 +17,10 @@ these features:
 
 ## Requirements
 
+- Node.js
+- Connect
 - Express
+- Cradle
 - A settings module that exports settings as an anonymous object:
 
     module.exports = {
