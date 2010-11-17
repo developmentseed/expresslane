@@ -18,9 +18,9 @@ Express lane builds around a couple of assumptions:
 - Cradle
 - A settings module that exports settings as an anonymous object:
 
-    `module.exports = {`
+    module.exports = {
         // My settings
-    `};`
+    };
 
 ## Express lane settings variables
 
