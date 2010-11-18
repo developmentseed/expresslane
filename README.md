@@ -10,11 +10,6 @@ Express lane builds around a couple of assumptions:
 - Settings are managed centrally and loaded on server object.
 - Session handling is used.
 
-Aside from sensible default for the above assumptions, Express Lane offers
-these features:
-
-- TODO
-
 ## Requirements
 
 - Node.js
@@ -27,9 +22,18 @@ these features:
         // My settings
     };
 
-## Default settings variables
+## Express lane settings variables
 
-// TODO
+- modules (array of modules to be required on start)
+- port
+- publicHostname
+- Layout template variables
+ - siteTitle
+ - siteSlogan
+ - entitiesRoot
+ - footerMessage
+ - analytics
+ - feedbackMessage
 
 ## Custom settings
 
@@ -41,8 +45,12 @@ these features:
     // settings.js - configure express server.
     module.exports = {
         modules: [
-            'bikelane'
+            'train'
         ],
+        train: {
+            cars: 12,
+            number: 502
+        }
         port: 8080,
         siteTitle: 'Transport'
     };
@@ -50,9 +58,13 @@ these features:
     // app.js - start express server.
     require('expresslane').start(__dirname);
 
+    // train.js - query settings.
+    var settings = require('expresslane').app.set('settings)('train);
+
     // Start application.
     node app.js
 
+
 ## Directory structure
 
-// TODO
+- `/public` - static files
