@@ -3,7 +3,7 @@
 
 Get started building with [Express](http://expressjs.com/) fast.
 
-Express lane builds around a couple of assumptions:
+Express Lane builds around these assumptions:
 
 - View engine is handlebars.
 - Database backend is CouchDB interfaced by [Cradle](https://github.com/cloudhead/cradle).
