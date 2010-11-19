@@ -68,13 +68,14 @@ Express Lane builds around these assumptions:
 
 - `/public` - static files
 
-## Environment settings
+## Environment dependent settings
 
-Additionally to settings.js, environment dependent settings overrides can be
-specified in modules named
+Additionally to settings.js, environment dependent settings can be specified
+in modules named
 
     settings.env.ENV_NAME.js
 
 So if the application is started with `NODE_ENV=production node app.js` a file
-`settings.env.production.js` would be looked for and - if present - its
-settings would selectively override values with the same key in settings.js.
+`settings.env.production.js` will be looked for and - if present - its
+values would be added to the ones defined in settings.js. If a value with the
+same key already exists in settings.js it will be overridden.
