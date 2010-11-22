@@ -1,0 +1,11 @@
+<div{{#class}} class="{{../class}}"{{/class}}>
+    {{#title}}<h2>{{{../link ../title}}}</h2>{{/title}}
+    <ul>
+    {{#items}}
+        <li>
+            {{{../link .}}}
+            {{#children}}{{{../../template ../children}}}{{/children}}
+        </li>
+    {{/items}}
+    </ul>
+</div>
