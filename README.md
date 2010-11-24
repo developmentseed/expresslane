@@ -14,6 +14,7 @@ Express Lane builds around these assumptions:
 - Node.js
 - Connect
 - Express
+- hbs
 - A settings module that exports settings as an anonymous object:
 
     module.exports = {
@@ -40,8 +41,8 @@ Express Lane builds around these assumptions:
 
 ## Usage
 
-    // Configuration for Express Lane and Express Lane modules.
-    var settings = {
+    // settings.js: configuration for Express Lane and Express Lane modules.
+    module.exports = {
         modules: [
             'train'
         ],
@@ -54,7 +55,7 @@ Express Lane builds around these assumptions:
     };
 
     // Start express server via Express Lane
-    require('expresslane').start(settings);
+    require('expresslane').start();
 
     // Example: query settings for train module.
     var settings = require('expresslane').app.set('settings)('train);
