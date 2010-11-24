@@ -40,8 +40,8 @@ Express Lane builds around these assumptions:
 
 ## Usage
 
-    // settings.js - configure express server.
-    module.exports = {
+    // Configuration for Express Lane and Express Lane modules.
+    var settings = {
         modules: [
             'train'
         ],
@@ -53,14 +53,11 @@ Express Lane builds around these assumptions:
         siteTitle: 'Transport'
     };
 
-    // app.js - start express server.
-    require('expresslane').start(__dirname);
+    // Start express server via Express Lane
+    require('expresslane').start(settings);
 
-    // train.js - query settings.
+    // Example: query settings for train module.
     var settings = require('expresslane').app.set('settings)('train);
-
-    // Start application.
-    node app.js
 
 ## Directory structure
 
