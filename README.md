@@ -68,14 +68,14 @@ Express Lane builds around these assumptions:
 
 You can display messages to the user on every page like this:
 
-    require('expresslane').globalMessages.on('collect', function(messages, req, res) {
-        messages.add('Hello World');
+    require('expresslane').on('renderGlobalMessages', function(req, res) {
+        res.globalMessages.push('Hello World');
     });
 
 TODO: Page based message support would be trivial:
 
     app.get('/', function(req, res, next) {
-        res.messages.add('Hello World');
+        res.messages.push('Hello World');
     });
 
 ## Environment dependent settings
