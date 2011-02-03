@@ -64,6 +64,20 @@ Express Lane builds around these assumptions:
 
 - `/public` - static files
 
+## Messages
+
+You can display messages to the user on every page like this:
+
+    require('expresslane').globalMessages.on('collect', function(messages, req, res) {
+        messages.add('Hello World');
+    });
+
+TODO: Page based message support would be trivial:
+
+    app.get('/', function(req, res, next) {
+        res.messages.add('Hello World');
+    });
+
 ## Environment dependent settings
 
 Additionally to settings.js, environment dependent settings can be specified
