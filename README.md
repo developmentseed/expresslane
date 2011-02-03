@@ -66,11 +66,13 @@ Express Lane builds around these assumptions:
 
 ## Messages
 
-You can display messages to the user on every page like this:
+You can display status messages to the user like this
 
-    require('expresslane').on('renderGlobalMessages', function(req, res) {
-        res.globalMessages.push('Hello World');
+    require('expresslane').on('renderStatusMessages', function(req, res) {
+        res.statusMessages.push('Hello World');
     });
+
+Of course your layout template needs to contain `{{statusMessage}}`.
 
 TODO: Page based message support would be trivial:
 
