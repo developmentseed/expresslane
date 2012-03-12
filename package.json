@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "express": "2.5.x",
+    "hbs": "1.0.x",
     "connect": "1.8.x"
   },
   "devDependencies": {}
